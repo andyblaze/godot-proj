@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ui8l5l2m1av6"]
+
+[ext_resource type="Texture2D" uid="uid://fl034agoui8b" path="res://assets/milky-way.jpg" id="1_14ny8"]
+
+[node name="stars-bg" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_14ny8")
+stretch_mode = 6

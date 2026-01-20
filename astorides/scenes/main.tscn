@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://3iwxin44dejw"]
+[gd_scene load_steps=3 format=3 uid="uid://3iwxin44dejw"]
 
 [ext_resource type="PackedScene" uid="uid://cxhtrutxm7x5a" path="res://scenes/background.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://ui8l5l2m1av6" path="res://scenes/stars_bg.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D"]
 
 [node name="background" parent="." instance=ExtResource("1_o5qli")]
+
+[node name="stars-bg" parent="." instance=ExtResource("2_0wfyh")]
