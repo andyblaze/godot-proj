@@ -1,13 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://ui8l5l2m1av6"]
+[gd_scene load_steps=3 format=3 uid="uid://ui8l5l2m1av6"]
 
 [ext_resource type="Texture2D" uid="uid://fl034agoui8b" path="res://assets/milky-way.jpg" id="1_14ny8"]
+[ext_resource type="Script" uid="uid://bxfyc2eosfknv" path="res://scenes/stars_bg.gd" id="1_kysvk"]
 
-[node name="stars-bg" type="Node2D"]
+[node name="starsBg" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kysvk")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="Node2D"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1344.0
+offset_bottom = 768.0
 texture = ExtResource("1_14ny8")
 stretch_mode = 6
