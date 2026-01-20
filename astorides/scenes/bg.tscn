@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci1ssj6s5l7h2"]
 
 [ext_resource type="Texture2D" uid="uid://fl034agoui8b" path="res://assets/milky-way.jpg" id="1_anprf"]
-[ext_resource type="Texture2D" uid="uid://ct00p4o3uq66x" path="res://assets/Image1.png" id="2_dpp0m"]
+[ext_resource type="Texture2D" uid="uid://xgb86jet33vy" path="res://assets/Image21.png" id="2_dpp0m"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dpp0m"]
+lifetime_randomness = 0.81
 particle_flag_disable_z = true
-direction = Vector3(0, 0, 0)
+emission_shape_offset = Vector3(900, 600, 0)
+angle_min = -262.6
+angle_max = 203.30002
+inherit_velocity_ratio = 1.0
+spread = 22.778
+angular_velocity_min = 8.469984
+angular_velocity_max = 118.58998
 gravity = Vector3(0, 0, 0)
-scale_min = 112.11
-scale_max = 112.11
-hue_variation_min = -2.2351742e-08
-hue_variation_max = -2.2351742e-08
-anim_speed_max = 1.13
 
 [node name="bg" type="Node2D"]
 
@@ -19,9 +21,10 @@ anim_speed_max = 1.13
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -24.0
-offset_right = 1920.0
-offset_bottom = 1056.0
+offset_left = 4.0
+offset_top = -29.0
+offset_right = 1924.0
+offset_bottom = 1051.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -30,11 +33,14 @@ texture = ExtResource("1_anprf")
 stretch_mode = 6
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 0.33333334, 1)
+self_modulate = Color(1, 1, 0.38039216, 1)
 amount = 49
 texture = ExtResource("2_dpp0m")
 lifetime = 9.66
+preprocess = 5.0
+speed_scale = 0.2
+randomness = 0.86
 visibility_rect = Rect2(0, 0, 1920, 1080)
-local_coords = true
-trail_enabled = true
 trail_lifetime = 0.61
 process_material = SubResource("ParticleProcessMaterial_dpp0m")
